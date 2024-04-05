@@ -1,0 +1,6 @@
+<app-error *ngIf="errorMessage" [errorMessage]="errorMessage" (close)="clearError()"></app-error>
+<app-search-form (search)="performSearch($event)" (error)="handleError($event)"></app-search-form>
+<section *ngIf="!searchPerformed">
+  <p>Search for people</p>
+</section>
+<app-card-container *ngIf="searchPerformed" [searchResults]="searchResults$ | async"></app-card-container>

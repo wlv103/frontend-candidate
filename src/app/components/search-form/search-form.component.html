@@ -1,0 +1,7 @@
+<section class="search-container">
+  <input type="text" placeholder="Search by Name" [(ngModel)]="term">
+  <select [(ngModel)]="color">
+    <option *ngFor="let colorOption of getColorKeys()" [ngValue]="Color[colorOption]">{{ colorOption }}</option>
+  </select>
+  <button (click)="performSearch()">Search</button>
+</section>

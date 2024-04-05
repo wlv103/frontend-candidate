@@ -1,0 +1,11 @@
+<section *ngIf="personDetails">
+  <nav>
+    <a [routerLink]="['/']">Back to search results</a>
+  </nav>
+  <h2>{{ personDetails.name }}</h2>
+  <p>Favorite Color: {{ personDetails.favorite_color }}</p>
+  <article *ngFor="let quote of getQuotes(personDetails.quotes)" class="quote-container">
+    <p class="quote-text">"{{ quote.text }}"</p>
+    <p class="likes">{{ quote.likes }} Likes</p>
+  </article>
+</section>
