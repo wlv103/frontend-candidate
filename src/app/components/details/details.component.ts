@@ -35,7 +35,7 @@ export class DetailsComponent implements OnInit {
         });
       }
     }
-
+    quotesArray.sort((a, b) => b.likes - a.likes);
     return quotesArray;
   }
 }

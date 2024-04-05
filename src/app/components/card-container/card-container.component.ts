@@ -1,4 +1,3 @@
-// card-container.component.ts
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
