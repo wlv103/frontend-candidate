@@ -20,7 +20,7 @@ export class SearchFormComponent {
       let submitColor = this.color ? this.color.toString() : '';
       this.search.emit({ term: this.term, color: submitColor });
     } else {
-      this.error.emit('Please select a color or enter a search term.');
+      this.error.emit('Please enter a name or select a color.');
     }
   }
 
